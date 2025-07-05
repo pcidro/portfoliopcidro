@@ -45,6 +45,34 @@ ul {
   padding: 1rem;
 }
 
+.titulo-principal {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  color: #0f172a;
+  font-weight: 700;
+  position: relative;
+}
+
+.titulo-principal::before,
+.titulo-principal::after {
+  content: "";
+  background: #2563eb;
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  position: relative;
+  bottom: 10px;
+}
+
+.titulo-principal::before {
+  margin-right: 10px;
+}
+
+.titulo-principal::after {
+  margin-left: 10px;
+}
+
 /* Header */
 
 .header {
@@ -175,35 +203,6 @@ ul {
   font-weight: 700;
 }
 
-.sobre-mim h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 3rem;
-  color: #0f172a;
-}
-
-.sobre-mim h1::after {
-  content: "";
-  background: #2563eb;
-  display: inline-block;
-  width: 40px;
-  height: 2px;
-  bottom: 10px;
-  position: relative;
-  margin-left: 10px;
-}
-
-.sobre-mim h1::before {
-  content: "";
-  background: #2563eb;
-  display: inline-block;
-  width: 40px;
-  height: 2px;
-  bottom: 10px;
-  position: relative;
-  margin-right: 10px;
-}
-
 .sobre-mim p {
   margin-bottom: 15px;
   color: #64748b;
@@ -212,17 +211,12 @@ ul {
 
 /* Skills */
 
-.skills h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #0f172a;
-}
-
 .skills p {
   color: #64748b;
   font-weight: 300;
   margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .skills-list {
@@ -232,6 +226,7 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 70px;
+  margin-bottom: 60px;
 }
 
 .skills-list li {
@@ -240,7 +235,7 @@ ul {
   align-items: center;
   font-weight: bold;
   color: #111;
-  background: linear-gradient(to bottom left, #ffffff, #f0f6ff);
+  background: #f9fafb;
   padding: 2rem 3rem;
 }
 
@@ -251,4 +246,176 @@ ul {
 .skills-list img:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
+}
+
+.other-skills {
+  background: #eef2ff;
+  border-radius: 30px;
+  width: 600px;
+}
+
+.other-skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #0f172a;
+  margin-top: 15px;
+}
+
+.list-other {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.list-other li {
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+/* Educação */
+
+.educacao {
+  background: #f9fafb;
+  padding-bottom: 80px;
+}
+
+.badge-tecnologo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background-color: #dbeafe;
+  color: #2563eb;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 60px;
+}
+
+.faculdade-container {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.faculdade-container h2 {
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+  color: #0f172a;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faculdade-instituicao {
+  color: #4b5563;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.faculdade-texto {
+  color: #374151;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 40px;
+  white-space: normal;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 20px;
+}
+
+.faculdade-texto::after {
+  content: "\A";
+  display: block;
+}
+
+.disciplinas-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 32px;
+  padding-left: 20px;
+  list-style-position: inside;
+  margin: 0;
+  list-style-type: disc;
+  align-items: center;
+  justify-content: center;
+}
+
+.disciplinas-list li::marker {
+  color: #2563eb;
+  font-size: 25px;
+}
+
+.h2-principais {
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* Idiomas */
+
+.idiomas {
+  padding-bottom: 80px;
+}
+
+.idioma {
+  background: #f9fafb;
+  padding: 1rem 2rem;
+  width: 400px;
+}
+
+.idiomas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.idioma-sigla {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.idioma-sigla span {
+  font-size: 2rem;
+}
+
+.proficiencia-container {
+  width: 250px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.proficiencia-texto {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.proficiencia-barra {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.proficiencia-preencher {
+  height: 100%;
+  background-color: #3575f5;
+  border-radius: 4px 0 0 4px;
+}
+
+.nivel-proeficiencia {
+  color: #3579f3;
+  font-weight: 700;
 }
